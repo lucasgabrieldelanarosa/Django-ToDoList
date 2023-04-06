@@ -1,0 +1,84 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block projectSelect %}
+
+    <!-- Project Selection -->
+    <div class="row w-25">
+        <select id="select-project" class="form-select" aria-label="Default select example">
+            <option selected>All Projects</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+
+{% endblock %}
+
+
+{% block body %}
+<button id='create-btn' class="btn btn-outline-success m-3">Create a new project or task</button>
+
+<h1 class="fs-3 m-3"> Tasks in <mark> Project </mark> </h1>
+    
+<main class="m-5 border border-dark-subtle p-3 tasks-grid-container">
+
+    <div class="card border border-info bg-info-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Task Name - Priority 1</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Task Project</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-dark">Delete Task</button>
+        </div>
+    </div>
+
+    <div class="card border border-warning bg-warning-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Task Name - Priority 2</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Task Project</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-dark">Delete Task</button>
+        </div>
+    </div>
+
+    <div class="card border border-danger bg-danger-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Task Name - Priority 3</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Task Project</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-dark">Delete Task</button>
+        </div>
+    </div>
+    
+    <div class="card border border-info bg-info-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Task Name - Priority 1</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Task Project</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-dark">Delete Task</button>
+        </div>
+    </div>
+
+    <div class="card border border-warning bg-warning-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Task Name - Priority 2</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Task Project</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-dark">Delete Task</button>
+        </div>
+    </div>
+
+    <div class="card border border-danger bg-danger-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Task Name - Priority 3</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Task Project</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-dark">Delete Task</button>
+        </div>
+    </div>
+
+</main>
+{% endblock %}
