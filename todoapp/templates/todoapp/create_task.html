@@ -1,0 +1,37 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block title %}
+Create Task
+{% endblock %}
+
+
+{% block body %}
+<a href="{% url 'create' %}" class="m-3 btn btn-success">Go back</a>
+<h1 class="fs-2 mx-3">Create a New Task</h1>
+
+<form class="form-group m-3" action="" method="POST">
+    <label for="taskName" class="col-sm-2 col-form-label mt-3">Task Name:</label>
+    <input type="text" class="form-control w-25" id="taskName">
+    
+
+    <label for="taskProject" class="col-sm-2 col-form-label mt-3">Task Project:</label>
+    <select id="taskProject" class="form-select w-25" aria-label="Default select example">
+        {% for project in allProjects %}
+            <option value="{{ project.title }}">{{ project.title }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="taskPriority" class="col-sm-2 col-form-label mt-3">Task Priority:</label>
+    {% for priority in allPriorities %}
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+            {{ priority.priorityValue }}
+            </label>
+        </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-outline-primary my-3">Create</button>
+</form>
+
+{% endblock %}

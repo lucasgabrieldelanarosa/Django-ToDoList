@@ -5,3 +5,11 @@
     justify-content: end;
     align-items: center;
 }
+
+.center-container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -9,10 +9,13 @@ Home Page
     <!-- Project Selection -->
     <div class="row w-25">
         <select id="select-project" class="form-select" aria-label="Default select example">
-            <option selected>All Projects</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          {% for project in allProjects %}
+            <option value="{{ project.title }}">{{ project.title }}</option>
+
+          {% empty%}
+            <option value="a">No Projects</option>
+          {% endfor %}
+
         </select>
     </div>
 
@@ -20,7 +23,14 @@ Home Page
 
 
 {% block body %}
-<button id='create-btn' class="btn btn-outline-success m-3">Create a new project or task</button>
+
+{% if user.is_authenticated %}
+
+<p class="m-3">Logged as <mark>{{ currentUser}}</mark> </p>
+
+{% endif %}
+
+<a href="{% url 'create' %}" id='create-btn' class="btn btn-outline-success m-3">Create a new project or task</a>
 
 <h1 class="fs-3 m-3"> Tasks in <mark> Project </mark> </h1>
     

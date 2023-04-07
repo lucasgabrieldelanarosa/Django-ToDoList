@@ -1,0 +1,22 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block title %}
+Create
+{% endblock %}
+
+
+{% block body %}
+<div class="center-container">
+    <h1 class="fs-2">Create a new...</h1>
+
+    <div class="d-flex">
+        <a href="{% url 'create_project' %}">
+            <button class="btn btn-outline-success" style="width: 100px;">Project</button>
+        </a>
+        <a href="{% url 'create_task' %}">
+            <button class="btn btn-outline-success mx-2" style="width: 100px;">Task</button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
